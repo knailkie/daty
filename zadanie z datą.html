@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <h2><input type="date" id="srum"> wybrana data</h2>
+  
+    <button onclick="datata()">Policz ile minęło dni od podanej daty</button>
+   <h3>
+    <span id="chuj"></span>
+</h3>
+
+    <script>
+var dutu = new Date()
+function datata() {
+    var elo = new Date(document.getElementById("srum").value)
+    var ser = dutu - elo
+    var sery = dutu - elo
+    var ser = Math.floor(ser/(1000*60*60*24))
+    var sery = Math.floor(sery/(1000*60*60) + 2)
+    document.getElementById("chuj").innerHTML = "uplynelo " + ser + " dni, a dokladniej " + sery + " godzin";
+}
+
+
+
+    </script>
+    
+</head>
+<body>
+   
+</body>
+</html>
